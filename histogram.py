@@ -9,6 +9,10 @@ class Histogram:
 	- Гистограммы
 	"""
 
+	def evalIVS(table)
+		"""Вычисление необходимых величин для интервального ряда"""
+		pass
+
 	def DrawIVSTable()
 		"""Отображение таблицы интервального вариационного ряда"""
 		pass
@@ -20,3 +24,4 @@ class Histogram:
 	def DrawDistDensityGraph()
 		"""Отображение графика плотности распределения"""
 		pass
+
