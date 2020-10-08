@@ -1,7 +1,6 @@
 import matplotlib
-import scipy
-import statistics
-import pandas
+import matplotlib.pyplot as plt
+matplotlib.style.use('ggplot')
 import math
 
 class Histogram:
@@ -9,32 +8,19 @@ class Histogram:
 	- Интервального вариационного ряда
 	- Гистограммы
 	"""
-
-	def evalIVS(self, table):
-		"""Вычисление необходимых величин для интервального ряда"""
-		randomNumbers = [18, 38, 28, 29, 26, 38, 34, 22, 28, 30, 22, 23, 35, 33, 27, 24, 30, 32, 28, 25, 29, 26, 31, 24, 29, 27, 32, 25, 29, 29]
-		"""Нахождение максимального и минимального значения"""
-		minNumber = min(randomNumbers)
-		maxNumber = max(randomNumbers)
-		"""Вычисление размаха"""
-		scope = maxNumber - minNumber
+	
+	def DrawHistogram(self, table):
 		"""Вычисление количества интервалов"""
-		intervalCount = 1 + 3.22 * math.log(len(randomNumbers))
-		"""Вычисление оптимальная ширины интервала"""
-		intervalWidth = scope / intervalCount
-		"""Вычисление границ интервала"""
-		bottomLine = minNumber
-		topLine = bottomLine + scope
-		pass
+		intervalCount = round(1 + 3.22 * math.log(len(table)))
 
-	def DrawIVSTable(self):
-		"""Отображение таблицы интервального вариационного ряда"""
-		pass
+		"""Параметры отображения гистограмы"""
+		n, bins, patches = plt.hist(table, intervalCount, facecolor='red', alpha=0.5, align='left')
 
-	def DrawHistogram(self):
+		"""Наименование графика и осей"""
+		plt.title('Гистограмма')
+		plt.xlabel('Интервалы значений')
+		plt.ylabel('Частота')
+
 		"""Отображение гистограммы"""
-		pass
-
-	def DrawDistDensityGraph(self):
-		"""Отображение графика плотности распределения"""
+		plt.show()
 		pass
