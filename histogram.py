@@ -32,12 +32,3 @@ class Histogram:
 		"""Отображение графиков"""
 		plt.show()
 		pass
-
-"""Проверка класса"""
-t = []
-for i in range(1,100):
-	t.append(randrange(-10,50))
-print(t)
-
-H = Histogram(t)
-H.DrawGraphs()
