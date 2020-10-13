@@ -1,3 +1,4 @@
+#Манна-Уитни
 from scipy.stats import mannwhitneyu
 from openpyxl import Workbook, load_workbook
 wb = load_workbook(str(input('Введите название файла ')))
