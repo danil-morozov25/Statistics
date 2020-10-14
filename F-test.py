@@ -20,7 +20,7 @@ class Ftest:
     # Takes a list of two elements, whitch which are the sample variances.
     def __init__(self, dispersions = None):
         self.dispersions = dispersions
-    #Returns 
+    #Returns result
     def ReturnF(self):
         if self.dispersions[0] > self.dispersions[1]:
             return (self.dispersions[0]**2)/(self.dispersions[1]**2)
