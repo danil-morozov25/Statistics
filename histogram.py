@@ -1,3 +1,8 @@
+"""
+	Модуль гистограммы
+	Выполнено студентами ПИ-Б19-1 Быков Данила и Кашин Никита
+"""
+#Импорты необходимых библиотек
 from random import randrange
 import math
 import seaborn as sns
@@ -9,10 +14,10 @@ class Histogram:
 	- Графика плотности распределения
 	- Гистограммы
 	"""
-	
+	#Конструктор
 	def __init__(self, table):
 		self.table = table
-
+	#Метод отрисовки графиков
 	def DrawGraphs(self):
 		"""Вычисление количества интервалов"""
 		intervalCount = round(1 + 3.22 * math.log(len(self.table)))
